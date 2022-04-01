@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className='w-screen h-max bg-slate-400'>
+      <div className='w-screen h-max bg-gray-600'>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
