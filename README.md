@@ -8,6 +8,16 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+
+```
+
+### Styling
+
+Tailwind is used for styling and needs to be updated when using a new utility class.
+To ensure changes are made run:
+
+```
+npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
