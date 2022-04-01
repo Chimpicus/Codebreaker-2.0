@@ -4,8 +4,12 @@ type Props = {};
 
 function Navbar({}: Props) {
   return (
-    <div className='w-full  px-4 py-1.5 h-10 bg-gray-800 flex font-mono text-green-300'>
+    <div className='w-full px-4 h-10 flex justify-between  items-center bg-gray-800 flex font-mono text-green-300'>
       <h1 className=''>Codebreaker</h1>
+      <div className='flex px-4'>
+        <button className='px-4'>Stats</button>
+        <button className='px-4'>Settings</button>
+      </div>
     </div>
   );
 }

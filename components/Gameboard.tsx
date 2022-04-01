@@ -28,7 +28,7 @@ function Gameboard({}: Props) {
           </div>
         </div>
         <div className=' flex justify-center items-center'>
-          <button className='p-1 rounded-md border-2 border-gray-300 font-mono text-sm text-gray-300'>Enter</button>
+          <button className='p-1 rounded-md border-2 border-gray-300 font-mono text-sm text-gray-300 bg-gray-700'>Enter</button>
         </div>
       </div>
     </div>
