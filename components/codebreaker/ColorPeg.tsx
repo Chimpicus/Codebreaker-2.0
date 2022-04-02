@@ -31,7 +31,7 @@ function ColorPeg() {
                 handleClick();
             }}
         >
-            <span className='flex justify-center items-center'>{peg.value}</span>
+            <span className='flex justify-center items-center select-none'>{peg.value}</span>
         </div>
     );
 }
