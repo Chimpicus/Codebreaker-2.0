@@ -1,6 +1,6 @@
-# Codebreaker 2.0
+# [Codebreaker 2.0](https://github.com/Chimpicus/MM-Codebreaker-2.0)
 
-View here https://codebreaker-2-0.vercel.app/
+Try it [here!](https://codebreaker-2-0.vercel.app/)
 
 ## Getting Started
 
