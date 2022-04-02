@@ -2,8 +2,6 @@
 
 Try it [here!](https://codebreaker-2-0.vercel.app/)
 
-test
-
 ## Getting Started
 
 First, run the development server:
