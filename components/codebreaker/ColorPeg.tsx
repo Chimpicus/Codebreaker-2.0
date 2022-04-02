@@ -15,7 +15,7 @@ function ColorPeg() {
         console.log('pegValue == ' + peg.value);
         if (peg.value === 9) {
             setPeg({
-                value: 1,
+                value: 0,
             });
         } else {
             setPeg({ value: peg.value + 1 });
@@ -31,7 +31,7 @@ function ColorPeg() {
                 handleClick();
             }}
         >
-            <span className='flex justify-center items-center select-none'>{peg.value}</span>
+            <span className='flex justify-center items-center select-none text-green-200'>{peg.value}</span>
         </div>
     );
 }
