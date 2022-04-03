@@ -26,12 +26,17 @@ function GamePeg() {
     return (
         <div
             id={`gamePeg_${null}`}
-            className={`h-8 w-8 border-2 border-gray-300 rounded-3xl bg-gray-700 flex justify-center items-center`}
+            className={`flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-8 w-8`}
+            style={
+                {
+                    /*insert feedback state colour here */
+                }
+            }
             onClick={() => {
                 handleClick();
             }}
         >
-            <span className='flex justify-center items-center select-none text-green-200'>{peg.value}</span>
+            <span className='flex justify-center items-center select-none text-cyan-200'>{peg.value}</span>
         </div>
     );
 }
