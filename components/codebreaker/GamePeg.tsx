@@ -6,7 +6,7 @@ export interface pegProps {
 }
 
 function GamePeg() {
-    let colors = ['gray-700', 'blue-400', 'green-400', 'yellow-400', 'red-500', 'indigo-400', 'teal-400', 'fuchsia-400', 'orange-500', 'white'];
+    const FeedbackColors = [null, 'red', 'amber', 'green'];
     let [peg, setPeg] = useState<pegProps>({
         value: 0
     });
