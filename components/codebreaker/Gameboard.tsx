@@ -7,7 +7,7 @@ function Gameboard({}: Props) {
     const rowId = [0, 1, 2, 3, 4];
 
     return (
-        <div className='flex flex-col justify-center items-center h-screen'>
+        <div className='flex flex-col justify-center items-center h-screen w-full'>
             {rowId.map((row) => (
                 <GameRow />
             ))}
