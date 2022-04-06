@@ -1,10 +1,8 @@
 import React from 'react';
 import GameRow from './GameRow';
 
-type Props = {};
-
-function Gameboard({}: Props) {
-    const rowId = [0, 1, 2, 3, 4];
+function Gameboard() {
+    const rowId = [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
     return (
         <div className='flex flex-col justify-center items-center h-screen w-full'>

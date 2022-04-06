@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import GamePeg from './GamePeg';
 import FeedbackPeg from './FeedbackPeg';
 
-type Props = {};
-
-function GameRow({}: Props) {
+function GameRow() {
     const PegIds = [0, 1, 2, 3, 4, 5];
     return (
         <div className='flex m-1 px-2 bg-slate-700 rounded-md shadow-lg shadow-gray-700'>
