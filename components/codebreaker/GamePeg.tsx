@@ -6,13 +6,11 @@ export interface pegProps {
 }
 
 function GamePeg() {
-    let colors = ['gray-700', 'blue-400', 'green-400', 'yellow-400', 'red-500', 'indigo-400', 'teal-400', 'fuchsia-400', 'orange-500', 'white'];
-    let [peg, setPeg] = useState<pegProps>({
+    // const FeedbackColors = [null, 'red', 'amber', 'green'];
+    const [peg, setPeg] = useState<pegProps>({
         value: 0
     });
     const handleClick = () => {
-        console.log('PEG CLICKED');
-        console.log('pegValue == ' + peg.value);
         if (peg.value === 9) {
             setPeg({
                 value: 0
@@ -20,13 +18,12 @@ function GamePeg() {
         } else {
             setPeg({ value: peg.value + 1 });
         }
-        console.log(peg);
     };
 
     return (
         <div
             id={`gamePeg_${null}`}
-            className={`flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-8 w-8`}
+            className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-8 w-8'}
             style={
                 {
                     /*insert feedback state colour here */
