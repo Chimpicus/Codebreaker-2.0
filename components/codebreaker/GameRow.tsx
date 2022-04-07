@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GamePeg from './GamePeg';
-import FeedbackPeg from './FeedbackPeg';
 
 function GameRow() {
     const PegIds = [0, 1, 2, 3, 4, 5];
@@ -11,7 +10,6 @@ function GameRow() {
                     <>
                         <div className='flex justify-around items-center'>
                             <GamePeg />
-                            {/* <FeedbackPeg /> */}
                         </div>
                     </>
                 ))}
