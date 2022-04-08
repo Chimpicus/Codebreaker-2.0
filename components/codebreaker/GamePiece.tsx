@@ -23,7 +23,7 @@ function GamePeg() {
     return (
         <div
             id={`gamePiece_${null}_${null}`}
-            className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-8 w-8'}
+            className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-7 w-7 mx-1'}
             style={
                 {
                     /*insert feedback state colour here */

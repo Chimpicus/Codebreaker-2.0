@@ -15,6 +15,8 @@ yarn dev
 
 ### Styling
 
+Mobile-first approach, adding responsive style for larger screens later on. Please ensure all styling fits on the galaxy fold in chrome dev tools.
+
 Tailwind is used for styling and needs to be updated when using a new utility class.
 To ensure changes are made run:
 
