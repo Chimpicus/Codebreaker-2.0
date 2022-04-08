@@ -1,15 +1,15 @@
 import React from 'react';
-import GamePeg from './GamePeg';
+import GamePiece from './GamePiece';
 
 function GameRow() {
-    const PegIds = [0, 1, 2, 3, 4, 5];
+    const gamePieces = [0, 1, 2, 3, 4, 5];
     return (
         <div className='flex m-1 px-2 bg-slate-700 rounded-md shadow-lg shadow-gray-700'>
-            <div id='row' className='w-80 h-12 flex justify-around'>
-                {PegIds.map(() => (
+            <div id={`row_${null}`} className='w-80 h-12 flex justify-around'>
+                {gamePieces.map((piece) => (
                     <>
                         <div className='flex justify-around items-center'>
-                            <GamePeg />
+                            <GamePiece id={piece.id} />
                         </div>
                     </>
                 ))}

@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 
 // type Props = {};
-export interface pegProps {
+interface PieceProps {
     value: number;
 }
 
 function GamePeg() {
     // const FeedbackColors = [null, 'red', 'amber', 'green'];
-    const [peg, setPeg] = useState<pegProps>({
+    const [piece, setPiece] = useState<PieceProps>({
         value: 0
     });
     const handleClick = () => {
-        if (peg.value === 9) {
-            setPeg({
+        if (piece.value === 9) {
+            setPiece({
                 value: 0
             });
         } else {
-            setPeg({ value: peg.value + 1 });
+            setPiece({ value: piece.value + 1 });
         }
     };
 
     return (
         <div
-            id={`gamePeg_${null}`}
+            id={`gamePiece_${null}_${null}`}
             className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-8 w-8'}
             style={
                 {
@@ -33,7 +33,7 @@ function GamePeg() {
                 handleClick();
             }}
         >
-            <span className='flex justify-center items-center select-none text-cyan-200'>{peg.value}</span>
+            <span className='flex justify-center items-center select-none text-cyan-200'>{piece.value}</span>
         </div>
     );
 }

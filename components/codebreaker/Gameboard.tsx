@@ -7,7 +7,7 @@ function Gameboard() {
     return (
         <div className='flex flex-col justify-center items-center h-screen w-full'>
             {row.map((row) => (
-                <GameRow key={row.id} />
+                <GameRow id={row.id} />
             ))}
         </div>
     );
