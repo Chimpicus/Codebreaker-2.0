@@ -3,6 +3,7 @@ import GamePiece from './GamePiece';
 
 function GameRow() {
     const gamePieces = [0, 1, 2, 3, 4, 5];
+
     return (
         <div className='flex m-1 px-2 bg-slate-700 rounded-md shadow-lg shadow-gray-700'>
             <div id={`row_${null}`} className='w-10/12 h-12 flex justify-around'>

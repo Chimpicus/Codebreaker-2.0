@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // type Props = {};
 interface PieceProps {
@@ -10,11 +10,13 @@ function GamePeg() {
     const [piece, setPiece] = useState<PieceProps>({
         value: 0
     });
-    const handleClick = () => {
+    const handleClick = (e) => {
         if (piece.value === 9) {
             setPiece({
                 value: 0
             });
+        } else if (e.ctrlKey) {
+            setPiece({ value: piece.value - 1 });
         } else {
             setPiece({ value: piece.value + 1 });
         }
@@ -29,8 +31,8 @@ function GamePeg() {
                     /*insert feedback state colour here */
                 }
             }
-            onClick={() => {
-                handleClick();
+            onClick={(e) => {
+                handleClick(e);
             }}
         >
             <span className='flex justify-center items-center select-none text-cyan-200'>{piece.value}</span>
