@@ -8,7 +8,7 @@ interface Event {
     ctrlKey: boolean;
 }
 
-function GamePeg() {
+function GamePiece() {
     // const FeedbackColors = [null, 'red', 'amber', 'green'];
     const [piece, setPiece] = useState<GamePieceProps>({
         value: 0
@@ -50,4 +50,4 @@ function GamePeg() {
     );
 }
 
-export default GamePeg;
+export default GamePiece;
