@@ -1,24 +1,34 @@
 import React, { useEffect, useState } from 'react';
 
 // type Props = {};
-interface PieceProps {
+interface GamePieceProps {
     value: number;
+}
+interface Event {
+    ctrlKey: boolean;
 }
 
 function GamePeg() {
     // const FeedbackColors = [null, 'red', 'amber', 'green'];
-    const [piece, setPiece] = useState<PieceProps>({
+    const [piece, setPiece] = useState<GamePieceProps>({
         value: 0
     });
-    const handleClick = (e) => {
-        if (piece.value === 9) {
-            setPiece({
-                value: 0
-            });
-        } else if (e.ctrlKey) {
-            setPiece({ value: piece.value - 1 });
-        } else {
+    const handleClick = (e: Event) => {
+        if (!e.ctrlKey) {
+            if (piece.value === 9) {
+                setPiece({
+                    value: 0
+                });
+                return;
+            }
             setPiece({ value: piece.value + 1 });
+        }
+        if (e.ctrlKey) {
+            if (piece.value === 0) {
+                setPiece({ value: 9 });
+                return;
+            }
+            setPiece({ value: piece.value - 1 });
         }
     };
 
