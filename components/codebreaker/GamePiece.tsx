@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // type Props = {};
-interface GamePieceProps {
-    value: number;
-}
+type GamePieceProps = {
+    id: number;
+    key: number;
+    rowId: number;
+};
 interface Event {
     ctrlKey: boolean;
 }
 
-function GamePiece() {
+const GamePiece: React.FC<GamePieceProps> = ({ id, key, value }) => {
     // const FeedbackColors = [null, 'red', 'amber', 'green'];
     const [piece, setPiece] = useState<GamePieceProps>({
         value: 0
@@ -34,13 +36,8 @@ function GamePiece() {
 
     return (
         <div
-            id={`gamePiece_${null}_${null}`}
+            id={`gamePiece_${row.id}_${id}`}
             className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-7 w-7 mx-1'}
-            style={
-                {
-                    /*insert feedback state colour here */
-                }
-            }
             onClick={(e) => {
                 handleClick(e);
             }}
@@ -48,6 +45,6 @@ function GamePiece() {
             <span className='flex justify-center items-center select-none text-cyan-200'>{piece.value}</span>
         </div>
     );
-}
+};
 
 export default GamePiece;
