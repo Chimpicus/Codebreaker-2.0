@@ -1,21 +1,21 @@
 import React from 'react';
 import GamePiece from './GamePiece';
 
-type Props = {
+type GameRowProps = {
     id: number;
     key: number;
     value: number;
     isActive: boolean;
 };
 
-const GameRow: React.FC<Props> = ({ id, key, value }) => {
+const GameRow: React.FC<GameRowProps> = ({ id, key, value, isActive }) => {
     return (
         <div className='flex m-1 px-2 bg-slate-700 rounded-md shadow-lg shadow-gray-700'>
             <div id={`row_${null}`} className='w-10/12 h-12 flex justify-around'>
                 {Array.from({ length: 6 }).map((i) => (
                     <>
                         <div className='flex justify-around items-center'>
-                            <GamePiece key={i} id={i} value={i} />
+                            <GamePiece key={i} id={i} value={i} rowId={i} />
                         </div>
                     </>
                 ))}

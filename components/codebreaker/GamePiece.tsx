@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 
 // type Props = {};
-type GamePieceProps = {
+interface GamePieceProps {
     id: number;
     key: number;
     rowId: number;
-};
+    value: number;
+    row: number;
+}
 interface Event {
     ctrlKey: boolean;
 }
 
-const GamePiece: React.FC<GamePieceProps> = ({ id, key, value }) => {
+const GamePiece: React.FC<GamePieceProps> = ({ id, key, value, rowId }) => {
     // const FeedbackColors = [null, 'red', 'amber', 'green'];
     const [piece, setPiece] = useState<GamePieceProps>({
+        id: id,
         value: 0
     });
     const handleClick = (e: Event) => {
@@ -36,7 +39,7 @@ const GamePiece: React.FC<GamePieceProps> = ({ id, key, value }) => {
 
     return (
         <div
-            id={`gamePiece_${row.id}_${id}`}
+            id={`gamePiece_${rowId}_${id}`}
             className={'flex justify-center items-center border-2 border-gray-300 rounded-3xl bg-gray-700 h-7 w-7 mx-1'}
             onClick={(e) => {
                 handleClick(e);
