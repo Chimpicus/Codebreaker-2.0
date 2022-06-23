@@ -1,10 +1,13 @@
 # [Codebreaker 2.0](https://github.com/Chimpicus/MM-Codebreaker-2.0)
 
+This is a rebuild of an older project, built with more up-to-date technologies such as Next.js, Typescript, and Tailwind. Redux is also a possible route for managing state of the game('s).
+With worlde being so popular, I have found a tutorial to use as reference to solving some of the problems, the link can be found [here](https://youtu.be/4qkMSWsUp2s)
+
 Try it [here!](https://codebreaker-2-0.vercel.app/)
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server and watch for tailwind changes:
 
 ```bash
 npm run dev
@@ -15,8 +18,17 @@ yarn dev
 
 ### Styling
 
+Mobile-first approach, adding responsive style for larger screens later on. Please ensure all styling fits on the galaxy fold in chrome dev tools.
+
 Tailwind is used for styling and needs to be updated when using a new utility class.
-To ensure changes are made run:
+
+The following command will now run the app and watch for changes to the inline tailwind classes and rebuild the output.css. :
+
+```
+yarn run dev
+```
+
+Alternativeley, run the following command to ensure changes are made:
 
 ```
 npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch

@@ -1,16 +1,14 @@
 import React from 'react';
 import GameRow from './GameRow';
 
-function Gameboard() {
-    const row = [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
-
+const Gameboard: React.FC = () => {
     return (
         <div className='flex flex-col justify-center items-center h-screen w-full'>
-            {row.map((row) => (
-                <GameRow key={row.id} />
-            ))}
+            {Array.from({ length: 6 })
+                .map((gameRow, i) => <GameRow key={i} id={i} isActive={false} />)
+                .reverse()}
         </div>
     );
-}
+};
 
 export default Gameboard;
